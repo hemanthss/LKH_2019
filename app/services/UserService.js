@@ -23,14 +23,13 @@
         return service;
 
         function StoreFormData(finaldata){
-            var data = {formdata: JSON.parse(JSON.stringify(finaldata.formdata)), formid: finaldata.formid};
             console.log("UserService:");
-            console.log(data);
+            console.log(finaldata);
             return $http({
                 method:"POST", 
-                // url:"https://recruit-apiservices.herokuapp.com/api/create", 
-                url:"https://apiservices-form.herokuapp.com/api/create",
-                data:data,
+                url:"https://apiservices-form.herokuapp.com/api/create", 
+                //url:"http://localhost:5000/api/create",
+                data:finaldata,
                 headers:{'Content-Type':'application/x-www-form-urlencoded; charset=utf-8'}
             }).then(handleSuccess,handleError);
         }

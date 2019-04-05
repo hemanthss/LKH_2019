@@ -2,7 +2,7 @@
   "_args": [
     [
       "angular-recaptcha@4.2.0",
-      "C:\\Users\\Admin\\Desktop\\LKH_2019-master"
+      "C:\\Users\\SUMANTH\\Desktop\\hemanth_changes\\LKH_2019"
     ]
   ],
   "_from": "angular-recaptcha@4.2.0",
@@ -26,7 +26,7 @@
   ],
   "_resolved": "https://registry.npmjs.org/angular-recaptcha/-/angular-recaptcha-4.2.0.tgz",
   "_spec": "4.2.0",
-  "_where": "C:\\Users\\Admin\\Desktop\\LKH_2019-master",
+  "_where": "C:\\Users\\SUMANTH\\Desktop\\hemanth_changes\\LKH_2019",
   "author": {
     "name": "VividCortex"
   },

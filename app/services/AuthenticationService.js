@@ -100,9 +100,10 @@
         {
             console.log("Authentication:");
             console.log(finaldata);
-            UserService.StoreFormData(finaldata).then(function(response){
+            var sdata = {formdata:JSON.stringify(finaldata.formdata), formid: finaldata.formid};
+            UserService.StoreFormData($httpParamSerializerJQLike(sdata)).then(function(response){
                 console.log("Serializer:")
-                console.log(finaldata);
+                console.log($httpParamSerializerJQLike(sdata));
                 if(response.status==200){
                     response = { success: true, data:response.data};
                 }else{

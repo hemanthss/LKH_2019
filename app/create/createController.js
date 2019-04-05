@@ -43,8 +43,12 @@
             AuthenticationService.formCreation(finaldata, function (response) {
                 if (response.success) {
                     $scope.successMsg = response.data.message;
-                    $state.go('create');
-                    alert(successMsg);
+                    $scope.formurl = response.data.url;
+                    alert($scope.successMsg);
+                    alert($scope.formurl);
+                    $state.go('home');
+                    //location.href=url;
+                    timestamp = 0;
                 } else {
                     //FlashService.Error(response.message);s
                     $scope.errorMsg = response.data.message;

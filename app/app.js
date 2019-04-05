@@ -23,8 +23,8 @@ function config($locationProvider,  $urlRouterProvider, $stateProvider, $httpPro
 
   $stateProvider
   // HOME STATES AND NESTED VIEWS ========================================
-      .state('recruit', {
-          url: '/recruit',
+      .state('home', {
+          url: '/home',
           templateUrl: 'partial-home.html',
       })
 
