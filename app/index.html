@@ -62,7 +62,7 @@
   <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <!-- Collection of nav links, forms, and other content for toggling -->
-            <a class="nav-link" ui-sref="recruit" class="navbar-brand">Voice-fill</a>
+            <a class="nav-link" ui-sref="home" class="navbar-brand">Voice-fill</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -71,19 +71,19 @@
                             <li class="nav-item"><a class="nav-link" ui-sref="about">About Us</a></li>
                             <li class="nav-item"><a class="nav-link" ui-sref="contact" ng-show="isLoggedIn">Contact Us</a></li>
                     </ul>
-                    <ul class="navbar-nav navbar-right">
+                    <!-- <ul class="navbar-nav navbar-right">
                             <li class="nav-item"><a  class="nav-link" role="button" aria-haspopup="true" aria-expanded="false" ui-sref='logout' ng-show="isLoggedIn">Logout</span></a></li>
-                    </ul>
+                    </ul> -->
                     <ul class="navbar-nav navbar-right">
-                        <li class="nav-item"><a  class="nav-link" ui-sref="create"   role="button" aria-haspopup="true" aria-expanded="false" ng-show="!isLoggedIn">Create</a></li>
+                        <li class="nav-item"><a  class="nav-link" ui-sref="create"   role="button" aria-haspopup="true" aria-expanded="false" ng-show="!isLoggedIn">Create Form</a></li>
                    </ul>
-                    <ul class="navbar-nav navbar-right">
+                    <!-- <ul class="navbar-nav navbar-right">
                             <li class="nav-item"><a  class="nav-link" ui-sref="login"   role="button" aria-haspopup="true" aria-expanded="false" ng-show="!isLoggedIn">Login</a></li>
                     </ul>
                     <ul class="navbar-nav navbar-right">
                             <li class="nav-item"><a  class="nav-link" ui-sref="register"  role="button" aria-haspopup="true" aria-expanded="false" ng-show="!isLoggedIn">Register</span></a></li>
-                    </ul>
-                    <ul class="navbar-nav navbar-right">
+                    </ul> -->
+                    <!-- <ul class="navbar-nav navbar-right">
                         <li class="nav-item"><a  class="nav-link" ui-sref="profile"  role="button" aria-haspopup="true" aria-expanded="false" ng-show="isLoggedIn">Profile</span></a></li>
                     </ul>
                     <form class="form-inline my-2 my-lg-0">
@@ -93,7 +93,7 @@
                                             <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
                                     </span>
                             </div>
-                    </form>
+                    </form> -->
             </div>
     </nav>
   </div>
@@ -114,9 +114,9 @@
                             <h5>Get started</h5>
                             <ul>
                                     <li><a ui-sref="#">Home</a></li>
-                                    <li><a ui-sref="create">Create</a></li>
-                                    <li><a ui-sref="login" ng-show="!isLoggedIn">Login</a></li>
-                                    <li><a ui-sref="register" ng-show="!isLoggedIn">Register</a></li>
+                                    <li><a ui-sref="create">Create Form</a></li>
+                                    <!-- <li><a ui-sref="login" ng-show="!isLoggedIn">Login</a></li>
+                                    <li><a ui-sref="register" ng-show="!isLoggedIn">Register</a></li> -->
                             </ul>
                     </div>
                     <div class="col-sm-2">

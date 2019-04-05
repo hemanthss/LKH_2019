@@ -19,7 +19,7 @@ function config($locationProvider,  $urlRouterProvider, $stateProvider, $httpPro
   $locationProvider.html5Mode(true);
 
   $httpProvider.interceptors.push('AuthInterceptors');
-  $urlRouterProvider.otherwise('/recruit');
+  $urlRouterProvider.otherwise('/home');
 
   $stateProvider
   // HOME STATES AND NESTED VIEWS ========================================
@@ -91,7 +91,7 @@ function config($locationProvider,  $urlRouterProvider, $stateProvider, $httpPro
       })
       
       .state('otherwise', {
-          url : '/recruit',
+          url : '/home',
           templateUrl: 'partial-home.html'
       });
 
