@@ -1,0 +1,50 @@
+<div class="ui raised very padded text container segment" ng-cloak>
+    <h2 class="ui header">Register for Recruit</h2>
+    <div>
+        <form name="setupNewGrid">
+        <div class ="myclass">
+            <fieldset  ng-repeat="column in columns">
+            
+                <md-input-container class="md-icon-float md-block">
+                    <label>Label</label>
+                    <!-- <md-icon><i class="fas fa-user"></i></md-icon> -->
+                    <input name="columnName" ng-model="column.name" type="text" required>
+                    <div ng-messages="registerform.columnName.$error">
+                        <div ng-message="required">Label is required</div> 
+                    </div>
+                </md-input-container>
+                <md-input-container>
+                        <md-select name="type" ng-model="column.type" required>
+                            <md-option value="Type">TYPE</md-option>
+                            <md-option value="text">text</md-option>
+                            <md-option value="number">number</md-option>
+                            <md-option value="select">select</md-option>
+                            <md-option value="date">date</md-option>
+                        </md-select>
+                </md-input-container>
+                <md-input-container>
+                    <div ng-if="column.type == 'select'">
+                            <md-input-container >
+                                <label for="options">select options</label>
+                                <textarea placeholder="options seperated by commass" ng-model=column.option rows="2" id="options" name="options"></textarea>
+                            </md-input-container>
+                        </div>
+                </md-input-container>
+                
+                
+                <md-input-container>
+                    <md-button class="md-raised md-danger remove" ng-click="removeColumn($index)">X</md-button>
+                </md-input-container>
+              
+            </fieldset>
+        </div>
+        <md-input-container>
+            <md-button class="md-raised md-primary addfields" ng-click="addNewColumn()">ADD</md-button>
+        </md-input-container>
+      </form>    
+      <!-- <h4 class="msg">Data Type Selected ID: {{dataType.id}} </h4>
+      <div class="msg">{{columns}}</div> -->
+      <button type="submit" class="btn btn-primary place_rt" ng-click="createForm()">Create</button>
+    </div>
+</div>
+<div><br/></div>
