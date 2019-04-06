@@ -21,6 +21,7 @@
         service.Logout = Logout;
         service.formCreation = Creation;
         service.GetUser = GetUser;
+        service.RetreiveData = RetreiveData
         return service;
         
         function Login(user, callback) {
@@ -104,6 +105,20 @@
             UserService.StoreFormData($httpParamSerializerJQLike(sdata)).then(function(response){
                 console.log("Serializer:")
                 console.log($httpParamSerializerJQLike(sdata));
+                if(response.status==200){
+                    response = { success: true, data:response.data};
+                }else{
+                    response = { success: false, data:response.data};
+                }
+                callback(response);
+            });
+        }
+
+        function RetreiveData(formUrl, callback)
+        {
+            console.log("Authentication:");
+            console.log(formUrl);
+            UserService.getFormData(formUrl).then(function(response){
                 if(response.status==200){
                     response = { success: true, data:response.data};
                 }else{

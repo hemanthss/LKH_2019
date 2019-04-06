@@ -19,6 +19,7 @@
         service.FacebookAuth = FacebookAuth;
         service.GetUserDetails = GetUserDetails;
         service.StoreFormData = StoreFormData;
+        service.getFormData = getFormData;
 
         return service;
 
@@ -30,6 +31,16 @@
                 url:"https://apiservices-form.herokuapp.com/api/create", 
                 //url:"http://localhost:5000/api/create",
                 data:finaldata,
+                headers:{'Content-Type':'application/x-www-form-urlencoded; charset=utf-8'}
+            }).then(handleSuccess,handleError);
+        }
+
+        function getFormData(formUrl){
+            console.log("UserService:");
+            console.log(formUrl);
+            return $http({
+                method:"GET", 
+                url:formUrl, 
                 headers:{'Content-Type':'application/x-www-form-urlencoded; charset=utf-8'}
             }).then(handleSuccess,handleError);
         }

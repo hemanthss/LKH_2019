@@ -55,12 +55,19 @@ function config($locationProvider,  $urlRouterProvider, $stateProvider, $httpPro
           controllerAs: 'login'
       })
 
-      .state('create', {
-        url: '/create',
-        templateUrl: 'create/create.html',
-        controller: 'createController',
-        controllerAs: 'create'
+      .state('useForm', {
+        url: '/useForm',
+        templateUrl: 'useForm/useForm.html',
+        controller: 'useFormController',
+        controllerAs: 'useForm'
     })
+
+        .state('create', {
+            url: '/create',
+            templateUrl: 'create/create.html',
+            controller: 'createController',
+            controllerAs: 'create'
+        })
 
       .state('register', {
           url: '/register',

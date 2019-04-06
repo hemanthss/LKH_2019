@@ -1,0 +1,37 @@
+    <div class="ui raised very padded text container segment" ng-cloak>
+        <h2 class="ui header">Fill Form</h2>
+        <div>
+                <form  ng-hide="showform" name="setupNewGrid">
+                        <md-input-container class="md-icon-float md-block">
+                                <label>Form url</label>
+                                <!-- <md-icon><i class="fas fa-user"></i></md-icon> -->
+                                <input name="fillName" ng-model="fillUrl" type="text" required>
+                                <div ng-messages="registerform.fileName.$error">
+                                    <div ng-message="required">form URL is required</div> 
+                                </div>
+                        </md-input-container>
+
+                        <button type="submit" class="btn btn-primary place_rt" ng-click="getForm()">GET form</button>
+                </form>
+                <form ng-show="showform" name="mainform" id="userform">
+                                <div ng-repeat="x in data_">
+                                    <label id={{myvar1}}{{$index}}>{{x.name}}</label>
+                                    <md-input-container class="md-icon-float md-block">
+                                    <div ng-if="x.type !='select'">
+                                        <input type={{x.type}} id={{myvar2}}{{$index}} value="" ng-click='myspeech($index)'>
+                                        
+                                    </div>
+                                    <div ng-if="x.type == 'select'">
+                                        <select ng-model="selected" ng-options="y for y in x.option" ng-click='myspeech($index)'></select>
+                                    </div>
+                                    </md-input-container>
+                                      
+                                </div>   
+                        <md-input-container>
+                            <md-button class="md-raised md-primary addfields" id="btnCommand" ng-click="myspeech()" >Voice Fill</md-button>
+                        </md-input-container>
+                </form>
+                
+        </div>
+    </div>
+    <div><br/></div>

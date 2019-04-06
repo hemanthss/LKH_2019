@@ -2,7 +2,7 @@
   "_args": [
     [
       "angular-environment@1.0.8",
-      "C:\\Users\\SUMANTH\\Desktop\\hemanth_changes\\LKH_2019"
+      "C:\\Users\\Admin\\Desktop\\kart_hack\\LKH_2019"
     ]
   ],
   "_from": "angular-environment@1.0.8",
@@ -26,7 +26,7 @@
   ],
   "_resolved": "https://registry.npmjs.org/angular-environment/-/angular-environment-1.0.8.tgz",
   "_spec": "1.0.8",
-  "_where": "C:\\Users\\SUMANTH\\Desktop\\hemanth_changes\\LKH_2019",
+  "_where": "C:\\Users\\Admin\\Desktop\\kart_hack\\LKH_2019",
   "author": {
     "name": "juanpablob",
     "email": "m.juanpablob@gmail.com"

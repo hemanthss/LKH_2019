@@ -45,6 +45,18 @@
       <!-- <h4 class="msg">Data Type Selected ID: {{dataType.id}} </h4>
       <div class="msg">{{columns}}</div> -->
       <button type="submit" class="btn btn-primary place_rt" ng-click="createForm()">Create</button>
+      <div class="dummy">
+            <div ng-repeat="x in data_.message">
+              <label id={{myvar}}{{$index}}>{{x.name}}</label>
+              <!-- <div ng-if="x.type == 'text' || x.type == 'number' || x.type == 'date'"> -->
+            <div ng-if="x.type !='select'">
+                <input type={{x.type}} id={{myvar}}{{$index}}/>
+            </div>
+            <div ng-if="x.type == 'select'">
+                <select ng-model="selected" ng-options="y for y in x.option"></select>
+            </div>  
+        </div>
+      
     </div>
 </div>
 <div><br/></div>

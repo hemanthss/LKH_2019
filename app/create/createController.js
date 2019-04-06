@@ -6,6 +6,43 @@
         createController.$inject = ['$location', 'AuthenticationService', '$scope', '$state'];
     function createController($location, AuthenticationService, $scope, $state) 
     {
+        $scope.data_ ={
+            "success": true,
+            "message": [
+                {
+                    "colId": "col1",
+                    "name": "name",
+                    "type": "text",
+                    "option": "",
+                    "$$hashKey": "object:6"
+                },
+                {
+                    "colId": "col2",
+                    "$$hashKey": "object:9",
+                    "name": "age",
+                    "type": "number"
+                },
+                {
+                    "colId": "col3",
+                    "$$hashKey": "object:12",
+                    "name": "Gender",
+                    "type": "select",
+                    "option": "male,female"
+                }
+            ],
+            "id": "bbd9f880-57cc-11e9-bf4a-534412521c07"
+        }
+        for(var i=0;i<$scope.data_.message.length;i++)
+        {
+            if($scope.data_.message[i].type == "select")
+            {
+                $scope.data_.message[i].option = $scope.data_.message[i].option.split(',');
+            }
+        }
+        console.log("mydata");
+        $scope.selected="";
+        console.log($scope.data_);
+        $scope.myvar = "voiceInput";
         $scope.isSelect=false;
         var finaldata={};
         var timestamp="";
@@ -36,6 +73,7 @@
 
         function createFormUser() 
         {
+            responsiveVoice.speak('This is the text you want to speak');
             console.log($scope.columns);
             console.log(timestamp);
             console.log("Controller:");
